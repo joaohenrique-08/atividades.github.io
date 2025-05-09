@@ -9,7 +9,7 @@ if (media >= 6){
     
 }
 else if(media < 4){
-    console.log("aluno reprovado");
+    console.log("aluno reprovado"); 
 }
 else{
     console.log("aluno de recuperação");
