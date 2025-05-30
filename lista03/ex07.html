@@ -9,7 +9,9 @@
     <script>
  let soma = 0;
  let media;
-    for (let i = 1; i <= 3; i++) {
+ let cont = 0;
+    while (true) {
+        
         let n = Number(prompt("digite um numero: "));
       
             if ( n === 0) {
@@ -17,9 +19,13 @@
          }
          else if (n != 0){
               soma = soma + n
-              media = soma/i 
+              cont++
+              
          }
-    }
+        }
+        media = soma/cont
+        
+    
     
     document.writeln(`<h1>Total: ${media}</h1>`);
     </script>
