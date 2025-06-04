@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Média de 10 Alunos</title>
+</head>
+<body>
+  <script>
+    function lerNota(aluno, numeroNota) {
+      let nota;
+      let repetir = true;
+
+      while (repetir) {
+        nota = prompt("Aluno " + aluno + " - Digite a " + numeroNota + "ª nota (0 a 10):");
+        nota = Number(nota);
+
+        if (nota >= 0 && nota <= 10) {
+          repetir = false;
+        } else {
+          alert("Nota inválida. Digite um número entre 0 e 10.");
+        }
+      }
+
+      return nota;
+    }
+
+    function calcularMedia(n1, n2) {
+      return (n1 + n2) / 2;
+    }
+
+    for (let aluno = 1; aluno <= 10; aluno++) {
+      let nota1 = lerNota(aluno, 1);
+      let nota2 = lerNota(aluno, 2);
+      let media = calcularMedia(nota1, nota2);
+      alert("Aluno " + aluno + " - Média: " + media);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Divisores de 1000</title>
+</head>
+<body>
+  <script>
+    function contarDivisores(x) {
+      let contador = 0;
+      let n = 1; 
+
+      while (n <= x) {
+        if (x % n === 0) {
+          contador = contador + 1;
+        }
+        n = n + 1;
+      }
+
+      return contador;
+    }
+
+    let numero = 1000;
+    let quantidade = contarDivisores(numero);
+
+    alert("Quantidade de divisores de " + numero + " entre 0 e 1000: " + quantidade);
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fatorial</title>
+</head>
+<body>
+  <script>
+    function calcularFatorial(n) {
+      let resultado = 1;
+      let i = n;
+
+      while (i > 1) {
+        resultado = resultado * i;
+        i = i - 1;
+      }
+
+      return resultado;
+    }
+
+    let numero = -1;
+
+    while (numero < 0 && numero % 1 !== 0) {
+      let entrada = prompt("Digite um número inteiro positivo (ou zero):");
+      numero = Number(entrada);
+
+      if (numero < 0 && numero % 1 !== 0) {
+        alert("Valor inválido. Digite um número inteiro positivo ou zero.");
+      }
+    }
+
+    let fatorial = calcularFatorial(numero);
+    alert("O fatorial de " + numero + " é " + fatorial);
+  </script>
+</body>
+</html>
