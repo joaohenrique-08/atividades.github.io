@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contagem Regressiva de Ano Novo</title>
+</head>
+<body>
+  <h1>Contagem Regressiva para o Ano Novo</h1>
+  <div id="resultado"></div>
+
+  <script>
+
+    let minutos = 1;
+
+
+    let segundos = minutos * 60;
+
+   
+    let div = document.getElementById("resultado");
+
+
+    if (minutos < 0) {
+      div.innerHTML = "Valor inválido. Os minutos devem ser positivos.";
+    } else if (minutos === 0) {
+      div.innerHTML = "Já é ano novo!";
+    } else {
+    
+      function contar(segundos) {
+        if (segundos > 0) {
+          div.innerHTML += "Faltam " + segundos + " segundos para o réveillon...<br>";
+          setTimeout(function() {
+            contar(segundos - 2);
+          }, 2000); 
+        } else {
+          div.innerHTML += "Feliz ano novo!";
+        }
+      }
+
+     
+      contar(segundos);
+    }
+  </script>
+</body>
+</html>
